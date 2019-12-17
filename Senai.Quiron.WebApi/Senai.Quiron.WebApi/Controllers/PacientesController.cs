@@ -22,6 +22,24 @@ namespace Senai.Quiron.WebApi.Controllers
             PacienteRepository = new PacienteRepository();
         }
 
+        [HttpPut]
+        public IActionResult Atualizar(Pacientes pacientes)
+        {
+            try
+            {
+                Pacientes PacienteBuscado = PacienteRepository.BuscarPorId(pacientes.IdPaciente);
+                if (PacienteBuscado == null)
+                    return NotFound();
+
+                PacienteRepository.Atualizar(pacientes);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
         [HttpGet]
         public IActionResult Listar()
         {

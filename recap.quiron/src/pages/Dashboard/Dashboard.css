@@ -1,0 +1,78 @@
+#container-dashboardadm{
+    height: 100vh;
+    width: 100vw;
+    background-color: #007EA6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#textos-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 15%;
+}
+#textos-header > h2{
+    color: #9EF0FE;
+    text-shadow: none;
+    font-size: 3em;
+    margin: 0;
+}
+#textos-header > p{
+    color: #63C6DD;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 0;
+}
+#botoes-direcionamento{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    height: 50%;
+}
+#botoes-dashboard-esquerda{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 35%;
+}
+#botoes-dashboard-direita{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 35%;
+}
+#botoes-dashboard-centro{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+    padding: 0 5% 0 5%;
+}
+.botoes{
+    font-size: 1.5em;
+    width: 100%;
+    height: 25%;
+    background-color: #00DAFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 18px #00000034;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #00000000;
+    text-decoration: none;
+}
+.botoes > div > p{
+    color: #007FA9;
+}
+.botoes:hover{
+    background-color: #007099;
+    border-color: #ff7700;
+    text-decoration: none;
+}
+.botoes:hover > div >  p{
+    color: #00DAFE;
+}

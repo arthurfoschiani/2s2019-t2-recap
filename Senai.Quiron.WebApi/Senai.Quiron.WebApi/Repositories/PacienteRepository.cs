@@ -10,6 +10,20 @@ namespace Senai.Quiron.WebApi.Repositories
 {
     public class PacienteRepository : IPacienteRepository
     {
+        public void Atualizar(Pacientes pacientes)
+        {
+            using (QuironContext ctx = new QuironContext())
+            {
+                Pacientes pacienteBuscado = ctx.Pacientes.FirstOrDefault(x => x.IdPaciente == pacientes.IdPaciente);
+                pacienteBuscado.Nome = pacientes.Nome;
+                pacienteBuscado.DataNascimento = pacientes.DataNascimento;
+                pacienteBuscado.Cpf = pacientes.Cpf;
+                pacienteBuscado.IdDoutor = pacientes.IdDoutor;
+                ctx.Pacientes.Update(pacienteBuscado);
+                ctx.SaveChanges();
+            }
+        }
+
         public void Cadastrar(Pacientes pacientes)
         {
             using (QuironContext ctx = new QuironContext())
@@ -34,6 +48,14 @@ namespace Senai.Quiron.WebApi.Repositories
             using (QuironContext ctx = new QuironContext())
             {
                 return ctx.Pacientes.Include(x => x.IdDoutorNavigation).ToList();
+            }
+        }
+
+        public Pacientes BuscarPorId(int id)
+        {
+            using (QuironContext ctx = new QuironContext())
+            {
+                return ctx.Pacientes.FirstOrDefault(x => x.IdPaciente == id);
             }
         }
     }
