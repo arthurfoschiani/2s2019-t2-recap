@@ -13,5 +13,6 @@ namespace Senai.Quiron.WebApi.Interfaces
         void Atualizar(Pacientes pacientes);
         void Deletar(int id);
         Pacientes BuscarPorId(int id);
+        List<Pacientes> FiltrarPorDoutor(int idDoutor);
     }
 }

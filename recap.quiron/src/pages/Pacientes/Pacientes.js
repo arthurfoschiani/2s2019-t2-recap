@@ -166,7 +166,7 @@ export default class Pacientes extends Component{
                         <div>
                             <form>
                                 <div className="form-group div-form">
-                                    {this.state.id === "" ? <div></div> : <div id="div-escondida"><p>id: {this.state.id}</p><button className="btn btn-dark"  id="btn-habilitar-cadastro" onClick={this.limparId.bind(this)}>Habilitar cadastro</button></div>}
+                                    {this.state.id === "" ? <div></div> : <div id="div-escondida"><p>Id: {this.state.id}</p><button className="btn btn-dark"  id="btn-habilitar-cadastro" onClick={this.limparId.bind(this)}>Habilitar cadastro</button></div>}
                                     <input className="form-control" id="nome" type="text" placeholder="Nome" value={this.state.nome} onChange={this.atualizaNome} />
                                     <input className="form-control" id="dataNascimento" type="date" placeholder="Data de Nascimento" value={this.state.dataNascimento} onChange={this.atualizaDataNascimento} />
                                     <input className="form-control" id="cpf" type="text" placeholder="CPF" value={this.state.cpf} onChange={this.atualizaCpf} />
@@ -179,7 +179,7 @@ export default class Pacientes extends Component{
                                                 )
                                             })}
                                     </select>
-                                    <button className="btn btn-dark" onClick={this.verificacao.bind(this)} id="submit" type="submit">enviar</button>
+                                    <button className="btn btn-dark" onClick={this.verificacao.bind(this)} id="submit" type="submit">Enviar</button>
                                 </div>
                             </form>
                             <p 
@@ -216,8 +216,8 @@ export default class Pacientes extends Component{
                                             <td>{this.getParsedDate(element.dataNascimento)}</td>
                                             <td>{element.cpf}</td>
                                             <td>{element.idDoutorNavigation != undefined ? element.idDoutorNavigation.nome : 'Não possui doutor cadastrado.'}</td>
-                                            <td><button className="btn btn-dark" onClick={() => this.completarForm(element)} type="submit">atualizar</button></td>
-                                            <td><button className="btn btn-dark" onClick={() => this.deletarPaciente(element.idPaciente)} type="submit">deletar</button></td>
+                                            <td><button className="btn btn-dark" onClick={() => this.completarForm(element)} type="submit">Atualizar</button></td>
+                                            <td><button className="btn btn-dark" onClick={() => this.deletarPaciente(element.idPaciente)} type="submit">Deletar</button></td>
                                         </tr>
                                     )
                                 })}

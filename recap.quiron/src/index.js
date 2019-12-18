@@ -6,6 +6,7 @@ import {Route, Link, BrowserRouter as Router, Switch, Redirect} from 'react-rout
 import Dashboard from './pages/Dashboard/Dashboard';
 import Medicos from './pages/Medicos/Medicos';
 import Pacientes from './pages/Pacientes/Pacientes';
+import FiltrarPorMedico from './pages/FiltrarPorMedico/FiltrarPorMedico';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -14,6 +15,7 @@ const routing = (
             <Switch>
                 <Route exact path='/' component={Dashboard} />
                 <Route path='/medicos' component={Medicos}/>
+                <Route path='/filtrar' component={FiltrarPorMedico}/>
                 <Route path='/pacientes' component={Pacientes}/>
             </Switch>
         </div>

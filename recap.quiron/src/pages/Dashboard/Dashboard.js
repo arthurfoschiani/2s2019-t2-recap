@@ -23,6 +23,11 @@ export default class Dashboard extends Component{
                                     <p>Pacientes</p>
                                 </div>
                             </Link>
+                            <Link className="botoes" to="/filtrar">
+                                <div>
+                                    <p>Filtrar</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

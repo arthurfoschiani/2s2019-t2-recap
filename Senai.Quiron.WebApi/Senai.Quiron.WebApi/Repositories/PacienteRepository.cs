@@ -58,5 +58,13 @@ namespace Senai.Quiron.WebApi.Repositories
                 return ctx.Pacientes.FirstOrDefault(x => x.IdPaciente == id);
             }
         }
+
+        public List<Pacientes> FiltrarPorDoutor(int idDoutor)
+        {
+            using (QuironContext ctx = new QuironContext())
+            {
+                return ctx.Pacientes.Include(x => x.IdDoutorNavigation).Where(x => x.IdDoutor == idDoutor).ToList();
+            }
+        }
     }
 }
